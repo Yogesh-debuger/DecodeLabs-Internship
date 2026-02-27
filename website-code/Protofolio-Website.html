@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coder | Portfolio</title>
+
+<!-- CSS -->
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+header{
+    background:#1e293b;
+    padding:15px 0;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#38bdf8;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+
+.nav-links li{
+    margin-left:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(to right,#0f172a,#1e293b);
+    padding-top:60px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#38bdf8;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:white;
+}
+
+.section{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:15px 25px;
+    margin:10px;
+    border-radius:5px;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:20px;
+    margin:15px auto;
+    width:300px;
+    border-radius:5px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    width:300px;
+    margin:auto;
+}
+
+input,textarea{
+    margin:10px 0;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e293b;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">coder</h2>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div>
+        <h1>Hello, I'm <span>Yogesh</span></h1>
+        <p>Aspiring Cloud Engineer 🚀</p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate student who wants to become a Cloud Engineer.
+        I love working with Linux, AWS, Terraform, Ansible Cloud, Docker and Automation tools.
+    </p>
+</section>
+
+<section id="skills" class="section">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Linux</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Docker</div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-card">
+        <h3>Static Website Hosting</h3>
+        <p>Hosted a static website using GitHub Pages.</p>
+    </div>
+    <div class="project-card">
+        <h3>Linux Automation Script</h3>
+        <p>Created Bash scripts to automate system tasks.</p>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+    </form>
+    <p id="form-message"></p>
+</section>
+
+<footer>
+    <p>© 2026 Coder | All Rights Reserved</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("form-message").innerText = "Message sent successfully!";
+});
+</script>
+
+</body>
+</html>
